@@ -6,7 +6,8 @@ import math
 radius = float(input("Enter the Radius of the Sphere: "))
 max_limit = radius * 2
 
-degs = np.arange(-40, 61, 1)
+frequency = float(input("Enter the Frequency of Angles: "))
+degs = np.arange(-40, 61, frequency)
 
 data = pd.DataFrame(columns=['X','Y'])
 
