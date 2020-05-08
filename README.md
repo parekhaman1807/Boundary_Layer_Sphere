@@ -1,2 +1,3 @@
 # Boundary_Layer_Sphere
-Code to calculate boundary layer thickness, displacement thickness and momentum thickness for flow past a sphere.
+*points_generator.py* - Generates datapoints around the Sphere in the XY plane. Radius and Frequency of Angles are parameters.
+*calculate.py* - Calculates the Boundary Layer Thickness
