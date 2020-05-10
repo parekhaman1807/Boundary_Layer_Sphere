@@ -29,7 +29,7 @@ plt.gca().fill_between(x_points,
                         alpha=0.25)
 ax.plot(bl_thick['X'], bl_thick['Y'], label='Boundary Layer Thickness')
 ax.plot(dis_thick['X'], dis_thick['Y'], label='Displacement Thickness')
-ax.plot(momen_thick['X'], momen_thick['Y'], label='Momentum Thickness')
+ax.plot(momen_thick['X'], momen_thick['Y'], linewidth=0.5, label='Momentum Thickness')
 plt.xlim([(-radius*2), (radius*2)])
 plt.ylim([0, (radius*3)])
 ax.axes.set_aspect(aspect='equal')
