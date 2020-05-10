@@ -9,8 +9,8 @@
 1. Calculates the Velocity Profile, Boundary Layer Thickness, Displacement Thickness and Momentum Thickness for flow past sphere. Radius and Frequency of Angles are parameters.
 2. Stores the Boundary Layer in *bl.csv*, Displacement Thickness in *dis.csv*, and Momentum Thickness in *momen.csv*. These files can be loaded onto the TecPlot figure. 
 
-(https://github.com/parekhaman1807/Boundary_Layer_Sphere/media/vel_pro.png "Velocity Profile")
-(https://github.com/parekhaman1807/Boundary_Layer_Sphere/media/boundary_layer_chars.png "Boundary Layer Characteristics")
+[Velocity Profile](https://github.com/parekhaman1807/Boundary_Layer_Sphere/media/vel_pro.png "Velocity Profile")
+[Boundary Layer Characteristics](https://github.com/parekhaman1807/Boundary_Layer_Sphere/media/boundary_layer_chars.png "Boundary Layer Characteristics")
 
 **plotter.py**
 1. Plots Boundary Layer Characteristics. _Under Testing_
