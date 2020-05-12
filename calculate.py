@@ -32,8 +32,8 @@ def Displacement_Thickness(val, dy):
     dis_thick = simps(val, dy)
     return dis_thick
 
-def Momentum_Thickness(u, val, dy):
-    y = np.multiply(u, val)
+def Momentum_Thickness(val1, val2, dy):
+    y = np.multiply(val1, val2)
     momen_thick = simps(y, dy)
     return momen_thick
 
@@ -60,7 +60,9 @@ for df in check:
     
     u = df[['Vel_Per']].to_numpy()
     u = np.asarray(u).squeeze()
-    val = np.ones(len(u)) - u
+    U = df['Vel_Per'].iloc[index_of_max_vel]
+    U = U * np.ones(len(u))
+    val = np.ones(len(u)) - (np.divide(u, U))
 
     dy = df[['radial']].to_numpy()
     dy = np.asarray(dy).squeeze()
@@ -70,7 +72,7 @@ for df in check:
     dis_thick = Displacement_Thickness(val[:index_of_max_vel], dy[:index_of_max_vel])
     displacement_thickness = np.append(displacement_thickness, dis_thick)
 
-    momen_thick = Momentum_Thickness(u[:index_of_max_vel], val[:index_of_max_vel], dy[:index_of_max_vel])
+    momen_thick = Momentum_Thickness(np.divide(u[:index_of_max_vel], U[:index_of_max_vel]), val[:index_of_max_vel], dy[:index_of_max_vel])
     momentum_thickness = np.append(momentum_thickness, momen_thick)
 
     pos = pos + 1
