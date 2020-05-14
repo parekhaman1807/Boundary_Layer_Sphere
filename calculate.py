@@ -144,4 +144,10 @@ ax2.plot(degs_for_ticks[:till], momentum_thickness[:till], label='Momentum Thick
 plt.xlabel('Angle')
 plt.ylabel('Thickness')
 plt.legend(loc='center')
+
+fig3, ax3 = plt.subplots(1)
+shape_factor = np.divide(displacement_thickness[:till], momentum_thickness[:till])
+ax3.plot(degs_for_ticks[:till], shape_factor)
+ax3.set_ylim([0, 3])
+
 plt.show()
