@@ -3,6 +3,7 @@ import pandas as pd
 from matplotlib import pyplot as plt 
 import math
 from scipy.integrate import simps
+from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes, mark_inset
 
 radius = float(input("Enter the Radius of the Sphere: "))
 max_limit = radius * 2
@@ -148,6 +149,10 @@ plt.legend(loc='center')
 fig3, ax3 = plt.subplots(1)
 shape_factor = np.divide(displacement_thickness[:till], momentum_thickness[:till])
 ax3.plot(degs_for_ticks[:till], shape_factor)
-ax3.set_ylim([0, 3])
+# axins = zoomed_inset_axes(ax3, 1.5, loc=2)
+# axins.plot(degs_for_ticks[:till], shape_factor)
+# axins.set_ylim(0, 3)
+# axins.set_xlim(50, 110)
+# mark_inset(ax3, axins, loc1=2, loc2=4, fc="none", ec="0.5")
 
 plt.show()

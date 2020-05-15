@@ -15,7 +15,8 @@ Boundary Layer Characteristics:
 ![](https://github.com/parekhaman1807/Boundary_Layer_Sphere/blob/master/media/boundary_layer_chars.png)
 Boundary Layer Characteristics on TecPlot figure:
 ![](https://github.com/parekhaman1807/Boundary_Layer_Sphere/blob/master/media/blc_tc.png)
-
+Shape Factor: 
+![](https://github.com/parekhaman1807/Boundary_Layer_Sphere/blob/master/media/shape_factor.png)
 
 
 **plotter.py**
