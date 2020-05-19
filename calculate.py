@@ -20,7 +20,7 @@ tcdata = tcdata.reset_index()
 tcdata = tcdata.drop(columns=['index'])
 
 frequency = float(input("Enter the Angle Frequency: "))
-degs = np.arange(-40, 61, frequency)
+degs = np.arange(-60, 61, frequency)
 degs_for_ticks = degs + 90
 num_of_degs = len(degs) 
 
@@ -149,6 +149,9 @@ plt.legend(loc='center')
 fig3, ax3 = plt.subplots(1)
 shape_factor = np.divide(displacement_thickness[:till], momentum_thickness[:till])
 ax3.plot(degs_for_ticks[:till], shape_factor)
+plt.xlabel('Angle')
+plt.ylabel('Shape Factor')
+ax3.set_ylim(0,10)
 # axins = zoomed_inset_axes(ax3, 1.5, loc=2)
 # axins.plot(degs_for_ticks[:till], shape_factor)
 # axins.set_ylim(0, 3)
