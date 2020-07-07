@@ -3,11 +3,15 @@ import pandas as pd
 from matplotlib import pyplot as plt 
 import math
 
+surface = input("Enter Surface: ")
 radius = float(input("Enter the Radius of the Sphere: "))
+
+if(surface == 'lower'):
+    radius = radius * (-1)
 max_limit = radius * 2
 
 frequency = float(input("Enter the Frequency of Angles: "))
-degs = np.arange(-60, 61, frequency)
+degs = np.arange(-40, 51, frequency)
 
 data = pd.DataFrame(columns=['X','Y'])
 
@@ -17,9 +21,9 @@ def LineGenerator(deg):
     y_start = radius * math.cos(math.radians(deg))
     y_end = max_limit * math.cos(math.radians(deg))
     
-    x_points = np.linspace(x_start, x_end, 1000)
-    y_points = np.linspace(y_start, y_end, 1000)
-    radial = np.linspace(radius, max_limit, 1000)
+    x_points = np.linspace(x_start, x_end, 10000)
+    y_points = np.linspace(y_start, y_end, 10000)
+    radial = np.linspace(radius, max_limit, 10000)
 
     return x_points, y_points, radial
 
